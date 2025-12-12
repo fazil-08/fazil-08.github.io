@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fazil Zaliyev - Portfolio</title>
     <link rel="stylesheet" href="Home.css">
 </head>
+
 <body>
     <header class="navbar">
         <div class="nav-inner">
@@ -21,25 +23,25 @@
                 <input id="header-search" placeholder="Search pages (Home, About, Projects)">
             </div>
             <div class="nav-repo">
-                <a href="https://github.com/fazil-08/SITE_assignment1" target="_blank" title="GitHub repo">
+                <a href="https://github.com/fazil-08/fazil-08.github.oi" target="_blank" title="GitHub repo">
                     <img src="PHOTOS/repo_logo.png" alt="GitHub">
                 </a>
             </div>
         </div>
     </header>
     <script>
-    (function(){
-      var input=document.getElementById('header-search');
-      if(!input) return;
-      input.addEventListener('keydown', function(e){
-        if(e.key==='Enter'){
-          var v=input.value.trim().toLowerCase();
-          if(v.indexOf('home')===0) location.href='Home.html';
-          else if(v.indexOf('about')!==-1) location.href='About.html';
-          else if(v.indexOf('project')!==-1) location.href='Projects.html';
-        }
-      });
-    })();
+        (function () {
+            var input = document.getElementById('header-search');
+            if (!input) return;
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    var v = input.value.trim().toLowerCase();
+                    if (v.indexOf('home') === 0) location.href = 'Home.html';
+                    else if (v.indexOf('about') !== -1) location.href = 'About.html';
+                    else if (v.indexOf('project') !== -1) location.href = 'Projects.html';
+                }
+            });
+        })();
     </script>
 
     <section class="hero">
@@ -51,8 +53,9 @@
     </section>
 
     <section class="content-section">
-        <p>I am a first-year <b>Mathematics</b> student at <b>ADA University</b>, passionate about problem-solving and learning. I'm dedicated to exploring the intersection of Mathematics, Physics and Engineering.</p>
-        
+        <p>I am a first-year <b>Mathematics</b> student at <b>ADA University</b>, passionate about problem-solving and
+            learning. I'm dedicated to exploring the intersection of Mathematics, Physics and Engineering.</p>
+
     </section>
 
     <section style="text-align: center; padding: 40px 20px;">
@@ -64,7 +67,8 @@
             <a href="https://github.com/fazil-08" target="_blank" title="My GitHub Profile">
                 <img src="PHOTOS/github.png" alt="GitHub">
             </a>
-            <a href="https://www.instagram.com/zaliyev_8?igsh=M2lrYnN3azE4ajFr" target="_blank" title="My Instagram Profile">
+            <a href="https://www.instagram.com/zaliyev_8?igsh=M2lrYnN3azE4ajFr" target="_blank"
+                title="My Instagram Profile">
                 <img src="PHOTOS/instagram_logo.png" alt="Instagram">
             </a>
         </div>
@@ -74,4 +78,5 @@
         <div>© 2025 Fazil Zaliyev</div>
     </footer>
 </body>
+
 </html>
