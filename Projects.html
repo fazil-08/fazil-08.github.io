@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="Home.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="Home.html" target="_self" title="Home">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="About.html" target="_self" title="Know Me">
-                    About Me
-                </a>
-            </li>
-            <li>
-                <a href="Projects.html" target="_self" title="See My Works">
-                    My Projects
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <header class="navbar">
+        <div class="nav-inner">
+            <a class="brand" href="Home.html">Fazil Zaliyev</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="Home.html" title="Home">Home</a></li>
+                    <li><a href="About.html" title="About Me">About Me</a></li>
+                    <li><a href="Projects.html" title="My Projects">My Projects</a></li>
+                </ul>
+            </nav>
+            <div class="nav-search">
+                <input id="header-search" placeholder="Search pages (Home, About, Projects)">
+            </div>
+        </div>
+    </header>
+    <script>
+    (function(){
+      var input=document.getElementById('header-search');
+      if(!input) return;
+      input.addEventListener('keydown', function(e){
+        if(e.key==='Enter'){
+          var v=input.value.trim().toLowerCase();
+          if(v.indexOf('home')===0) location.href='Home.html';
+          else if(v.indexOf('about')!==-1) location.href='About.html';
+          else if(v.indexOf('project')!==-1) location.href='Projects.html';
+        }
+      });
+    })();
+    </script>
 
     <div style="text-align: center; padding: 40px 20px; background-color: white;">
         <h1>My Projects</h1>
@@ -46,6 +56,21 @@
             </div>
 
             <p><a href="https://youtu.be/wEWO1FxQRXM?si=fYYZEYvJnpqpqlBt" target="_blank">Watch our project video →</a></p>
+        </div>
+
+        <div class="project-card">
+            <h2>Project 2: Hour of Code</h2>
+            <p>For this project, we were tasked with selecting a school to organize an informative event on basic algorithms.</p>
+            <p>This year, the event was titled "Hour of AI". We presented and demonstrated fundamental algorithms and artificial intelligence concepts in an engaging and accessible way.</p>
+            
+            <div class="project-images">
+                <img src="PHOTOS/WhatsApp Image 2025-12-12 at 13.02.25.jpeg" alt="Project 2 - Photo 1">
+                <img src="PHOTOS/WhatsApp Image 2025-12-12 at 20.34.43.jpeg" alt="Project 2 - Photo 2">
+                <img src="PHOTOS/WhatsApp Image 2025-12-12 at 20.34.441.jpeg" alt="Project 2 - Photo 3">
+                <img src="PHOTOS/WhatsApp Image 2025-12-12 at 20.34.44.jpeg" alt="Project 2 - Photo 4">
+            </div>
+
+            <p>Our video is not ready yet</p>
         </div>
     </div>
 

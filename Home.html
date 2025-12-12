@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="Home.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="Home.html" target=_self title="Home">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="About.html" target=_self title="Know Me">
-                    About Me
-                </a>
-            </li>
-            <li>
-                <a href="Projects.html" target=_self title="See My Works">
-                    My Projects
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <header class="navbar">
+        <div class="nav-inner">
+            <a class="brand" href="Home.html">Fazil Zaliyev</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="Home.html" title="Home">Home</a></li>
+                    <li><a href="About.html" title="About Me">About Me</a></li>
+                    <li><a href="Projects.html" title="My Projects">My Projects</a></li>
+                </ul>
+            </nav>
+            <div class="nav-search">
+                <input id="header-search" placeholder="Search pages (Home, About, Projects)">
+            </div>
+        </div>
+    </header>
+    <script>
+    (function(){
+      var input=document.getElementById('header-search');
+      if(!input) return;
+      input.addEventListener('keydown', function(e){
+        if(e.key==='Enter'){
+          var v=input.value.trim().toLowerCase();
+          if(v.indexOf('home')===0) location.href='Home.html';
+          else if(v.indexOf('about')!==-1) location.href='About.html';
+          else if(v.indexOf('project')!==-1) location.href='Projects.html';
+        }
+      });
+    })();
+    </script>
 
     <section class="hero">
         <div class="profile-container">
